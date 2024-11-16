@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Geist Mono", monospace;
+}
+
+body {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tasklist-container {
+    background-color: white;
+    height: 24em;
+    width: 50%;
+    border-radius: 10px;
+}
