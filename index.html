@@ -11,21 +11,21 @@
         <div class="tasklist-container">
             <h1>Task List</h1>
             <form class="agregar-task-container">
-                <label for="tarea">Nueva Tarea</label>
+                <label for="input-tarea">Nueva Tarea</label>
                 <div class="input-button-container">
-                    <input type="text" name="" placeholder="Lavar los platos">
-                    <button>Agregar</button>
+                    <input id="input-tarea" type="text" placeholder="Lavar los platos">
+                    <button id="btn-agregar">Agregar</button>
                 </div>
             </form>
             <div class="task-contador-container">
                 <div class="total-realizadas-container">
                     <div>
                         <p>Total:</p>
-                        <p>0</p>
+                        <p id="total-tareas">0</p>
                     </div>
                     <div>
-                        <p>Realizadas:</p>
-                        <p>0</p>
+                        <p>Completas:</p>
+                        <p id="total-tareas-completas">0</p>
                     </div>
                 </div>
                 <div class="span-task-container">
@@ -33,15 +33,12 @@
                         <h2>ID</h2>
                         <h2>Tarea</h2>
                     </div>
-                    <div class="span-input-container">
-                        <span>25</span>
-                        <span>Limpiar el baño</span>
-                        <input type="checkbox">
-                        <button>X</button>
+                    <div id="task-list">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
