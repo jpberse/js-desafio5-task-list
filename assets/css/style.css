@@ -7,8 +7,8 @@
     font-family: "Geist Mono", monospace;
 }
 
-body {
-    background-color: black;
+.container {
+    background-image: linear-gradient(to bottom right, #009245, #FCEE21);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -16,8 +16,84 @@ body {
 }
 
 .tasklist-container {
-    background-color: white;
-    height: 24em;
+    background-color: rgb(238, 238, 238);
+    min-height: 16em;
     width: 50%;
-    border-radius: 10px;
+    border-radius: 8px;
+    padding: 0 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.tasklist-container h1 {
+    font-size: 2em;
+    margin-top: 0.1em;
+    margin-bottom: 0.5em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.input-button-container input {
+    width: 80%;
+    height: 2.5em;
+    border: none;
+    padding-left: 0.5em;
+    border-radius: 0.3em;
+}
+
+.input-button-container button {
+    width: 8em;
+    height: 2.8em;
+    background-color: #009245;
+    color: rgb(238, 238, 238);
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+
+.task-contador-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.total-realizadas-container div {
+    display: flex;
+}
+
+.total-realizadas-container div p:nth-child(2){
+    font-weight: 500;
+    padding-left: 0.3em;
+}
+
+.span-task-container {
+    margin: 0 0 0.5em 24em
+}
+
+.id-tarea-container {
+    display: flex;
+    gap: 2em;
+}
+
+.id-tarea-container h2 {
+    font-size: 18px;
+}
+
+.span-input-container {
+    display: flex;
+    align-items: center;
+    gap: 2.2em;
+    padding: 0.2em 0;
+}
+
+.span-input-container button {
+    border-radius: 50%;
+    font-size: 8px;
+    font-weight: 700;
+    color: white;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: rgb(255, 85, 0);
+    border: none;
+    cursor: pointer;
 }

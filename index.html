@@ -7,31 +7,41 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="tasklist-container">
-        <h1>Task List</h1>
-        <form>
-            <label for="tarea">Nueva Tarea</label>
-            <input type="text" name="" placeholder="Lavar los platos">
-            <button>Agregar</button>
-        </form>
-        <div>
-            <p>Total:</p>
-            <p>0</p>
-            <p>Ralizadas:</p>
-            <p>0</p>
-        </div>
-        <div>
-            <div>
-                <h2>ID</h2>
-                <h2>Tarea</h2>
+    <section class="container">
+        <div class="tasklist-container">
+            <h1>Task List</h1>
+            <form class="agregar-task-container">
+                <label for="tarea">Nueva Tarea</label>
+                <div class="input-button-container">
+                    <input type="text" name="" placeholder="Lavar los platos">
+                    <button>Agregar</button>
+                </div>
+            </form>
+            <div class="task-contador-container">
+                <div class="total-realizadas-container">
+                    <div>
+                        <p>Total:</p>
+                        <p>0</p>
+                    </div>
+                    <div>
+                        <p>Realizadas:</p>
+                        <p>0</p>
+                    </div>
+                </div>
+                <div class="span-task-container">
+                    <div class="id-tarea-container">
+                        <h2>ID</h2>
+                        <h2>Tarea</h2>
+                    </div>
+                    <div class="span-input-container">
+                        <span>25</span>
+                        <span>Limpiar el baño</span>
+                        <input type="checkbox">
+                        <button>X</button>
+                    </div>
+                </div>
             </div>
-            <div>
-                <span>25</span>
-                <span>Limpiar el baño</span>
-                <input type="checkbox">
-                <button>X</button>
-            </div>
         </div>
-    </div>
+    </section>
 </body>
 </html>
