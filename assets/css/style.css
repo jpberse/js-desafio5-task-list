@@ -18,7 +18,7 @@
 .tasklist-container {
     background-color: rgb(238, 238, 238);
     min-height: 16em;
-    width: 50%;
+    width: 62em;
     border-radius: 8px;
     padding: 0 0.5em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
@@ -71,8 +71,8 @@
 }
 
 .id-tarea-container {
-    display: flex;
-    gap: 2em;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
 }
 
 .id-tarea-container h2 {
@@ -80,9 +80,9 @@
 }
 
 .span-input-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr;
     align-items: center;
-    gap: 2.2em;
     padding: 0.2em 0;
 }
 
@@ -91,8 +91,8 @@
     font-size: 8px;
     font-weight: 700;
     color: white;
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 18px;
+    height: 18px;
     background-color: rgb(255, 85, 0);
     border: none;
     cursor: pointer;

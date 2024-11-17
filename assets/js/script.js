@@ -7,14 +7,15 @@ const checkbox = document.querySelector('#checkbox')
 
 const tasks = [
     { id: 1, task: "Pasear en el parque", isComplete: false },
-    { id: 2, task: "Comprar en el supermercado", isComplete: false },
+    { id: 2, task: "Pagar Cuentas", isComplete: false },
     { id: 3, task: "Lavar el auto", isComplete: false }
 ]
 
 renderTasks(tasks);
+actualizarContadorChecked();
 
-btnAgregar.addEventListener('click', (event) => {
-    event.preventDefault()
+btnAgregar.addEventListener('click', (e) => {
+    e.preventDefault()
     const task = inputTask.value.trim()
     if (task === "") {
         alert('Ingresa una tarea valida');
@@ -26,17 +27,32 @@ btnAgregar.addEventListener('click', (event) => {
     inputTask.value = ""
 
     renderTasks(tasks)
+    actualizarContadorChecked()
 })
 
 const borrarTask = (id) => {
-    const index = tasks.findIndex(item => item.id === id )
+    const index = tasks.findIndex(item => item.id === id)
+    if(tasks[index].iscomplete === true) {
+        tasks[index].iscomplete = false
+    }
     tasks.splice(index, 1);
     renderTasks(tasks)
+    actualizarContadorChecked()
 }
 
-/* const ischecked = () {
+const isChecked = (id) => {
+    const index = tasks.findIndex(item => item.id === id)
+    tasks[index] ? tasks[index].isComplete = !tasks[index].isComplete : 'error'
 
-} */
+    actualizarContadorChecked()
+}; 
+
+
+function actualizarContadorChecked() {
+    const completeTask = tasks.filter(complete => complete.isComplete === true);
+    tasksCompletadas.textContent = completeTask.length;
+    totalTasks.textContent = tasks.length;
+}
 
 function renderTasks(tareas) {
     let html = ""
@@ -46,11 +62,11 @@ function renderTasks(tareas) {
                 <div class="span-input-container">
                     <span>${tarea.id}</span>
                     <span>${tarea.task}</span>
-                    <input id="checkbox" type="checkbox">
+                    <input id="checkbox" type="checkbox" onchange="isChecked(${tarea.id})"
+                        ${tarea.isComplete? "checked" : "" }>
                     <button onclick="borrarTask(${tarea.id})">X</button>
                 </div>`;
     })
 
     listaDeTasks.innerHTML = html;
-    totalTasks.innerHTML = tareas.length;
 }
